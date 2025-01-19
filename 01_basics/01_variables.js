@@ -5,7 +5,9 @@ let emailId = "lax@gmail.com";
 var cityId = "3555";
 
  emailId = "sita@gmail.com";
+ let accountState
 
 console.log(accountId);
 
-console.table(["accountId", "cityId"]);
+// prefer to use let not var because of the issue in block scope and functional scope//
+console.table(["accountId", "cityId", accountState]);
