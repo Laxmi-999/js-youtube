@@ -39,3 +39,39 @@ console.log(typeof details);
 console.log(typeof myFunction);
 
 
+// stact (primitive), Heap(non-primitive)
+
+let chanelName = "myYouTubegmaidotcom";
+
+let anotherChanelName = chanelName;
+anotherChanelName =" laxYouTubegmaildotcom";
+
+
+console.log(chanelName);
+
+console.log(anotherChanelName);
+
+///Heap
+
+let userOne = {
+    email:"user1@gmail.com",
+    id:"user123"
+}
+
+console.log(userOne);
+
+let userTwo = userOne;
+
+userTwo.email = "user2@gmail.com";
+
+console.log(userOne.email);
+
+console.log(userTwo.email);
+
+
+
+
+
+
+
+
