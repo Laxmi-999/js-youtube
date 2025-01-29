@@ -23,6 +23,10 @@
         <li class="list-item" >one </li>
         <li class="list-items"> two </li>
         <li class="list-items"> three </li>
+        <li class="list-items"> four</li>
+        <li class="list-items"> five </li>
+
+
      </ul>
     </div>
 </body>
@@ -98,3 +102,110 @@ myListItems.innerText
 
 myListItems.innerText = "ten"
 'ten'
+
+
+//////////// NODE LIST ===> node list is not array but it is quit similar to array
+
+ocument.querySelectorAll('li')
+NodeList(3) [li.list-item, li.list-items, li.list-items]0: li.list-item1: li.list-items2: li.list-itemslength: 3[[Prototype]]: NodeList
+const templist = document.querySelectorAll('li')
+
+undefined
+
+templist
+NodeList(3) [li.list-item, li.list-items, li.list-items]0: li.list-item1: li.list-items2: li.list-itemslength: 3[[Prototype]]: NodeListentries: ƒ entries()forEach: ƒ forEach()item: ƒ item()keys: ƒ keys()length: (...)values: ƒ values()constructor: ƒ NodeList()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "NodeList"get length: ƒ length()[[Prototype]]: Object
+
+const myArr = [1,2,3,4,5,6]
+undefined
+
+myArr
+(6) [1, 2, 3, 4, 5, 6]0: 11: 22: 33: 44: 55: 6length: 6[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+
+
+templist[0].style.color = "green"
+'green'
+
+
+templist.forEach(function(l) {
+    l.style.color = "green"
+} )
+
+
+
+
+
+//////////////// HTML COLLECTION /////////////////
+
+ HTMLcollection ==> it should be converted into the array to apply any loop or map metho
+
+ document.getElementsByClassName("list-items")
+HTMLCollection(4) [li.list-items, li.list-items, li.list-items, li.list-items]
+
+const tempClassList = document.getElementsByClassName("list-items")
+undefined
+
+tempClassList
+HTMLCollection(4) [li.list-items, li.list-items, li.list-items, li.list-items]
+
+Array.from(tempClassList)
+(4) [li.list-items, li.list-items, li.list-items, li.list-items]0: li.list-items1: li.list-items2: li.list-items3: li.list-itemslength: 4[[Prototype]]: Array(0)at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+
+const myConvertedArray = Array.from(tempClassList)
+undefined
+
+myConvertedArray
+(4) [li.list-items, li.list-items, li.list-items, li.list-items]
+
+myConvertedArray.forEach(function(li) {
+    li.style.color = "yellow"
+} )
+undefined
+
+
+
+/// manipulating js wikipidia
+
+document.querySelectorAll('h3')
+NodeList(28) [h3#Creation_at_Netscape, h3#Adoption_by_Microsoft, h3#The_rise_of_JScript, h3#Growth_and_standardization, h3#Reaching_maturity, h3#Examples_of_scripted_behavior, h3#Libraries_and_frameworks, h3#JavaScript_engine, h3#Runtime_system, h3#Imperative_and_structured, h3#Weakly_typed, h3#Dynamic, h3#Object-orientation_(prototype-based), h3#Functional, h3#Delegative, h3#Miscellaneous, h3#Vendor-specific_extensions, h3#Cross-site_scripting, h3#Cross-site_request_forgery, h3#Misplaced_trust_in_the_client, h3#Misplaced_trust_in_developers, h3#Browser_and_plugin_coding_errors, h3#Sandbox_implementation_errors, h3#Hardware_vulnerabilities, h3#Java, h3#JSON, h3#Transpilers, h3#WebAssembly]0: h3#Creation_at_Netscape1: h3#Adoption_by_Microsoft2: h3#The_rise_of_JScript3: h3#Growth_and_standardization4: h3#Reaching_maturity5: h3#Examples_of_scripted_behavior6: h3#Libraries_and_frameworks7: h3#JavaScript_engine8: h3#Runtime_system9: h3#Imperative_and_structured10: h3#Weakly_typed11: h3#Dynamic12: h3#Object-orientation_(prototype-based)13: h3#Functional14: h3#Delegative15: h3#Miscellaneous16: h3#Vendor-specific_extensions17: h3#Cross-site_scripting18: h3#Cross-site_request_forgery19: h3#Misplaced_trust_in_the_client20: h3#Misplaced_trust_in_developers21: h3#Browser_and_plugin_coding_errors22: h3#Sandbox_implementation_errors23: h3#Hardware_vulnerabilities24: h3#Java25: h3#JSON26: h3#Transpilers27: h3#WebAssemblylength: 28[[Prototype]]: NodeList
+const allH3 = document.querySelectorAll('h3')
+undefined
+allH3.innerText
+undefined
+allH3[0].innerText
+'Creation at Netscape'
+Array.from(alert)
+[]
+const arrayOfH3 = Array.from(allH3)
+undefined
+arrayOfH3.style.color = "blue"
+VM502:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:23
+(anonymous) @ VM502:1Understand this errorAI
+ar
+VM509:1 Uncaught ReferenceError: ar is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM509:1Understand this errorAI
+arrayOfH3.forEach(function(item) {
+    item.style.color = "yellow"
+})
+undefined
+arrayOfH3.forEach(function(item) {
+    item.style.color = "yellow"
+})
+undefined
+arrayOfH3.forEach(function(item) {
+    item.style.color = "yellow"
+    item.style.backgroundColor = "blue"
+})
+undefined
+arrayOfH3.forEach(function(item) {
+    item.style.color = "yellow";
+    item.style.backgroundColor = "blue";
+    item.style.innerText = "Laxmi Regmi"
+})
+undefined
+arrayOfH3.forEach(function(item) {
+    item.style.color = "yellow";
+    item.style.backgroundColor = "blue";
+    item.innerText = "Laxmi Regmi"
+})
