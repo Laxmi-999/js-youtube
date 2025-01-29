@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom Learning</title>
+    <style>
+        .bg-black{
+            background: #212121;
+            color: #fff;
+
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div >
+     <h1 id ="title" class="main heading">DOM learning in youtube <span style="display: none;"> test text </span></h1>
+     <h2> hello this is h2 </h2>
+     <h2> hello this is h2 </h2>
+     <h2> hello this is h2 </h2>
+      <input type="password">
+     <p> this is sample paragraph</p>
+     <ul>
+        <li class="list-item" >one </li>
+        <li class="list-items"> two </li>
+        <li class="list-items"> three </li>
+     </ul>
+    </div>
+</body>
+</html>
+
+<!-- 
+//DOM MANIPULATION
+// document.getElementById("") ==> 
+// document.getElementById("") ==>
+//document.getElementById('title').class
+//document.getElementById('title').id ==>
+// we can also set the attribute to the element 
+// document.getElementById("").setAttribute('class', 'test') ==>  it return undefined value  but behind that it  set the 
+// new value to the attribute to the element  by overriding with old value
+
+///    we can add style to the DOM element //////////
+
+/// title.style.backgroundColor = "green";///
+//// title.style.padding = "10px";
+/// title.style.borderRadius = "10px";
+
+
+
+/// difference between title.textContent; and title.innerText
+
+title.innerText    /// innerText returns what is visible
+'DOM learning in youtube'
+
+
+
+title.textContent    /// textContent returns all the contents inside the elements including non-visible text
+'DOM learning in youtube  test text '
+
+innerHTML ===> it returs all the html  inside the  elements
+
+// query-selector
+document.querySelector('.heading')
+<h1 id=​"title" class=​"main heading">​…​</h1>​
+
+
+document.querySelector('input[type = "password"]')
+<input type=​"password">​
+
+document.querySelector('ul')
+<ul>​…​</ul>​
+
+const myul = document.querySelector('ul')
+undefined
+
+myul
+<ul>​…​</ul>
+​
+myul.qu
+undefined
+
+myul.querySelector('li')
+<li class=​"list-item">​…​</li>​
+
+const myListItems =  myul.querySelector('li')
+undefined
+
+myListItems
+<li class=​"list-item">​…​</li>​
+
+myListItems.style.backgroundColor = "green"
+'green'
+
+myListItems.style.padding = "10px"
+'10px'
+
+myListItems.innerText
+'one'
+
+myListItems.innerText = "ten"
+'ten'
