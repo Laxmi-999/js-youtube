@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM || learning session three</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // creating elemenent using script
+
+    const div = document.createElement('div');
+    console.log(div);
+
+    // giving class name to the div
+    div.className = "main"
+    
+    // giving ID
+    div.id=Math.round(Math.random() * 10  + 1)
+
+    //giving title attribute must be in key and value pair
+    div.setAttribute("title", "DOM learning");
+
+    // giving some styles to the element
+
+    div.style.backgroundColor = "orange"
+    div.style.padding = "8px"
+
+    // giving some text 
+    //first method
+
+    // div.innerText = "This is DOM learning session three" // it overrids the  with previous value
+
+   // second method
+   const addText = document.createTextNode("This is DOM learning session three")
+   div.appendChild(addText);
+    
+
+    // above element is only created inside the memory but not to the documet
+    // or webpage. to display above created element u have to add element to the 
+    // body of the document as below
+
+    document.body.appendChild(div)
+</script>
+</html>
