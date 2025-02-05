@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htnml Events </title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+
+<script>
+
+
+    // event objects ==> u mostly find many events such as pointer events, mouseEvents, keybord events related to the browser and enviroment events
+
+   // u may ask in interviw to find the timestamp when u click the image using events
+
+   //************************** INTERVIEW ******************************/
+     // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+
+    
+
+ // METHOD ONE
+//    document.getElementById('owl').onclick = function(){ // this is also one of the good method but it doesnt provide more feature like event propagation
+//     alert("owl clicked");
+//    }
+
+ /// BEST METHOD TWO
+
+//  document.getElementById( "images" ).addEventListener('click', function(e) {
+//     alert("clicked inside the ul");
+    
+
+
+//    }, false) // last parameter false is for event propagation, event bubling and event 
+
+
+//    document.getElementById('owl').addEventListener('click', function(e) {
+//     alert("owl clicked");
+//     e.stopPropagation();
+    
+//     }, false)
+
+
+ /// OTHER METHODS
+ // attachEvent ()==> it was mostly used in earlier when there were difficulties to run application on internet explorer.
+ // jQuery-onEventListner() => jQuery is a framework like react js, and it uses oneventlistner() method;
+//*********************example of prevent default*********************
+ // to prevent the default behavior of elements such as submit of of form and anchor tag behaviour
+
+//  document.getElementById('google').addEventListener('click', function(e){
+
+//     e.preventDefault();
+//     e.stopPropagation();
+//     alert("google clicked");
+
+//  }, false)
+
+
+ //****************** to remove the li when cliked **************
+
+ document.querySelector('#images').addEventListener('click', function(e){
+
+    let removeIt = e.target.parentNode;
+    if(e.target.tagName === 'IMG' ){
+
+
+        console.log(removeIt);
+        
+       removeIt.remove(); // simple method
+       // removeIt.parentNode.removeChild(removeIt);  // complex method
+    }
+    console.log(e.target.id);
+
+    
+    
+ })
+
+
+</script>
+</html>
